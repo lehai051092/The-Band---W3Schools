@@ -9,6 +9,14 @@ html {
     font-family: Helvetica, Arial, sans-serif;
 }
 
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
 /*
     1. Từ ngoài vào trong
     2. Từ trên xuống dưới
@@ -31,33 +39,79 @@ html {
     background-color: #000000;
 }
 
-#nav {
+#header .search-btn {
+    float: right;
+    line-height: 46px;
+    padding: 0 21px;
+    cursor: pointer;
 }
 
-#nav li {
+#header .search-btn:hover {
+    background-color: #f44336;
+}
+
+#header .search-icon {
+    color: #ffffff;
+    font-size: 20px;
+}
+
+#nav {
     display: inline-block;
+}
+
+#nav > li {
+    display: inline-block;
+    position: relative;
+}
+
+#nav li:hover .subnav {
+    display: block;
+}
+
+#nav > li > a {
+    color: #ffffff;
+    line-height: 46px;
+    padding: 0 24px;
+    text-transform: uppercase;
 }
 
 #nav li a {
-    color: #ffffff;
     text-decoration: none;
-    line-height: 46px;
-    padding: 0 24px;
     display: inline-block;
 }
 
-#nav li:hover a {
+#nav .subnav li:hover,
+#nav > li:hover > a {
     color: #000000;
     background-color: #cccccc;
 }
 
-
 #nav .subnav {
     display: none;
+    position: absolute;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    min-width: 160px;
+    top: 100%;
+    left: 0;
+}
+
+#nav .subnav li {
+    cursor: pointer;
+}
+
+#nav .subnav a {
+    color: #000000;
+    line-height: 38px;
+    padding: 0 16px;
+}
+#nav .nav-arrow-down {
+    font-size: 14px;
 }
 
 #slider {
-
+    /*background-color: #333333;*/
+    /*min-height: 500px;*/
 }
 
 #conten {
