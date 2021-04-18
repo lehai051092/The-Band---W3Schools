@@ -5,8 +5,11 @@
     box-sizing: border-box;
 }
 
+/* Common */
+
 html {
     font-family: Helvetica, Arial, sans-serif;
+    scroll-behavior: smooth;
 }
 
 ul {
@@ -23,6 +26,68 @@ a {
 
 .text-white {
     color: #ffffff !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.text-uppercase {
+    text-transform: uppercase !important;
+}
+
+.pull-right {
+    float: right !important;
+}
+
+.row {
+    margin: 0 -8px;
+}
+
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.col {
+    float: left;
+    padding: 0 8px;
+}
+
+.col-1 {
+    width: 100%;
+}
+
+.col-2 {
+    width: 50%;
+}
+
+.col-3 {
+    width: calc(100% / 3);
+}
+
+.mt-8 {
+    margin-top: 8px !important;
+}
+
+.mt-16 {
+    margin-top: 16px !important;
+}
+
+.btn {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 10px 16px;
+    display: inline-block;
+    border: none;
+    margin-top: 15px;
+}
+
+.btn:hover {
+    color: #000000;
+    background-color: #cccccc;
+    cursor: pointer;
 }
 
 /*
@@ -50,8 +115,10 @@ a {
     left: 0;
     right: 0;
     z-index: 5;
+    overflow: hidden;
 }
 
+#header .menu-mobile-btn,
 #header .search-btn {
     float: right;
     line-height: 46px;
@@ -63,10 +130,24 @@ a {
     background-color: #f44336;
 }
 
+#header .menu-mobile-btn {
+
+}
+
+#header .menu-mobile-btn:hover {
+    background-color: #cccccc;
+}
+
+#header .menu-mobile-btn:hover .menu-icon {
+    color: #000000;
+}
+
+#header .menu-icon,
 #header .search-icon {
     color: #ffffff;
     font-size: 20px;
 }
+
 
 #nav {
     display: inline-block;
@@ -154,8 +235,9 @@ a {
 
 #content .content-section {
     width: 800px;
+    max-width: 100%;
     margin: 0 auto;
-    padding: 80px 16px;
+    padding: 64px 16px 112px;
 }
 
 #content .section-heading {
@@ -182,12 +264,6 @@ a {
 
 #content .members-list {
     margin-top: 48px;
-}
-
-#content .member-item {
-    float: left;
-    width: calc(100% / 3);
-    text-align: center;
 }
 
 #content .member-name {
@@ -235,14 +311,7 @@ a {
 }
 
 .places-list {
-    margin: 32px -8px 0;
-    padding-bottom: 48px;
-}
-
-.place-item {
-    float: left;
-    width: calc(100% / 3);
-    padding: 0 8px;
+    margin-top: 32px;
 }
 
 .place-img {
@@ -274,19 +343,61 @@ a {
     line-height: 1.4;
 }
 
-.place-buy-btn {
-    background-color: #000000;
-    color: #ffffff;
-    padding: 10px 16px;
+/* Contact form */
+.contact-content {
+    margin-top: 48px;
+}
+
+.contact-info {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.contact-info i[class*='ti-'] {
     display: inline-block;
+    width: 30px;
+}
+
+.contact-form {
+    font-size: 15px;
+}
+
+.contact-form .form-control {
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+/* Map section */
+.map-section img {
+    width: 100%;
+}
+
+/* Footer */
+#footer {
+    padding: 64px 16px;
+}
+
+#footer .socials-list {
+    font-size: 24px;
+}
+
+#footer .copyright,
+#footer .copyright a,
+#footer .socials-list a {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+#footer .copyright a:hover,
+#footer .socials-list a:hover {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+#footer .copyright {
+    font-size: 15px;
     margin-top: 15px;
 }
 
-.place-buy-btn:hover {
-    color: #000000;
-    background-color: #cccccc;
-}
-
-#footer {
-
+#footer .copyright a {
+    text-decoration: underline;
 }
